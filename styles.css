@@ -1,0 +1,150 @@
+body{
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(128, 128, 128, 0.276);
+            position: relative;
+        }
+
+        .question{
+            width: 60vw;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .options{
+            width: 75%;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 15px;
+            background-color: rgba(128, 128, 128, 0.107);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .option{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            cursor: pointer;
+            position: relative;
+        }
+        .optionI{
+            appearance: none;
+            background-color: white;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            cursor: pointer;
+            background-color: transparent;
+            inset: -5px -5px -5px -5px;
+            position: absolute;
+            transition: border 0.1s;
+        }
+        .optionI:checked{
+            border: 2px solid rgb(0, 0, 0);
+        }
+        .on{
+            font-size: 1.5rem;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgba(128, 128, 128, 0.329);
+            cursor: pointer;
+        }
+        .settingsBtn, .close{
+            font-size: 20px;
+            position: absolute;
+            right: 1%;
+            top: 2%;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            transition: transform 0.3s ease;
+        }
+        .settingsBtn:hover{
+            transform: rotate(150deg);
+            transition: transform 0.3s ease;
+        }
+        .settings{
+            padding: 100px;
+        }
+        .toggle{
+            -webkit-appearance: none;
+            appearance: none;
+            width: 50px;
+            height: 30px;
+            background-color: rgb(177, 177, 177);
+            border-radius: 30px;
+            position: relative;
+            transition: background-color .3s;
+            cursor: pointer;
+        }
+        .toggle::after{
+            content: '';
+            height: 20px;
+            width: 20px;
+            border-radius: 30px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            transition: left .3s;
+        }
+        .toggle:checked{
+            background-color: rgb(141, 221, 141);
+        }
+        .toggle:checked::after{
+            left: 70%;
+        }
+        .div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .setContainer{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .div2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        .settings{
+           margin: 0;
+           padding: 10px 20px;
+        }
+        dialog{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 300px;
+            width: 75vw;
+        }
