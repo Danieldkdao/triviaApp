@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="settingsBtn"><i class="fa-solid fa-gear fa-2xl" style="color: #000000;"></i></button>
+    <dialog class="settings">
+        <button class="close"><i class="fa-solid fa-xmark fa-2xl"></i></button>
+        <h1>Settings</h1>
+        <h3>Category</h3>
+        <div class="setContainer">
+            <div class="div">
+                <label>Music</label>
+                <input type="checkbox" class="toggle" value="music">
+            </div>
+            <div class="div">
+                <label>Sport and Leisure</label>
+                <input type="checkbox" class="toggle" value="sport_and_leisure">
+            </div>
+            <div class="div">
+                <label>Film and TV</label>
+                <input type="checkbox" class="toggle" value="film_and_tv">
+            </div>
+            <div class="div">
+                <label>Arts and Literature</label>
+                <input type="checkbox" class="toggle" value="arts_and_literature">
+            </div>
+            <div class="div">
+                <label>History</label>
+                <input type="checkbox" class="toggle" value="history">
+            </div>
+            <div class="div">
+                <label>Society and Culture</label>
+                <input type="checkbox" class="toggle" value="society_and_culture">
+            </div>
+            <div class="div">
+                <label>Science</label>
+                <input type="checkbox" class="toggle" value="science">
+            </div>
+            <div class="div">
+                <label>Geography</label>
+                <input type="checkbox" class="toggle" value="geography">
+            </div>
+            <div class="div">
+                <label>Food and Drink</label>
+                <input type="checkbox" class="toggle" value="food_and_drink">
+            </div>
+            <div class="div">
+                <label>General Knowledge</label>
+                <input type="checkbox" class="toggle" value="general_knowledge">
+            </div>
+        </div>
+        <h3>Difficulty Level</h3>
+        <div class="div2">
+            <div class="div">
+                <label>Easy</label>
+                <input type="checkbox" class="toggle" value="easy">
+            </div>
+            <div class="div">
+                <label>Medium</label>
+                <input type="checkbox" class="toggle" value="medium">
+            </div>
+            <div class="div">
+                <label>Hard</label>
+                <input type="checkbox" class="toggle" value="hard">
+            </div>
+        </div>
+    </dialog>
+    <h1>Quiz Game</h1>
+    <div class="question">
+        <div>
+            <h3>Correct: <span style="color: rgb(0, 255, 21); margin: 0;" class="correct">0</span></h3>
+            <h3>Incorrect: <span style="color: red; margin: 0;" class="incorrect">0</span></h3>
+        </div>
+        <div class="displayQ">
+            <h2 class="h2"></h2>
+            <h4 class="yes"></h4>
+        </div>
+        <div class="options">
+            <h1 class="error">Loading...</h1>
+        </div>
+        <button class="on">Submit</button>
+    </div>
+    <script src="https://kit.fontawesome.com/cdcd88ab68.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
