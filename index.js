@@ -24,6 +24,9 @@
         cate.forEach((box) => {
             box.addEventListener('change', (event) => {
                 if (event.target.checked){
+                    if (categories.length === 10){
+                        categories = [];
+                    }
                     categories.push(event.target.value);
                 }
                 else{
@@ -35,6 +38,9 @@
         diffCheck.forEach((box) => {
             box.addEventListener('change', (event) => {
                 if (event.target.checked){
+                    if (diff.length === 3){
+                        diff = [];
+                    }
                     diff.push(event.target.value);
                 }
                 else{
@@ -47,8 +53,6 @@
 
         settingsBtn.addEventListener('click', () => {
             settings.showModal();
-            categories = [];
-            diff = [];
         })
 
         closeBtn.addEventListener('click', () => {
