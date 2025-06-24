@@ -50,13 +50,14 @@
         });
         settings.showModal();
 
-
         settingsBtn.addEventListener('click', () => {
             settings.showModal();
+            settings.style.pointerEvents = "auto";
         })
 
         closeBtn.addEventListener('click', () => {
             settings.close();
+            settings.style.pointerEvents = "none";
             if (categories.length === 0){
                 categories = [
                 "music",
@@ -187,4 +188,4 @@
                 isAnswering = true;
                 fetchQ(categories, diff);
             }
-        })
+        });
