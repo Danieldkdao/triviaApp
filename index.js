@@ -21,6 +21,16 @@
         let correct = 0;
         let incorrect = 0;
 
+        function showDiv(){
+            settings.style.opacity = "1";
+            settings.style.pointerEvents = "auto";
+        }
+
+        function closeDiv(){
+            settings.style.opacity = "0";
+            settings.style.pointerEvents = "none";
+        }
+
         cate.forEach((box) => {
             box.addEventListener('change', (event) => {
                 if (event.target.checked){
@@ -48,16 +58,14 @@
                 }
             })
         });
-        settings.showModal();
+        showDiv();
 
         settingsBtn.addEventListener('click', () => {
-            settings.showModal();
-            settings.style.pointerEvents = "auto";
+            showDiv();
         })
 
         closeBtn.addEventListener('click', () => {
-            settings.close();
-            settings.style.pointerEvents = "none";
+            closeDiv();
             if (categories.length === 0){
                 categories = [
                 "music",
